@@ -6,7 +6,7 @@ This is a simple [Minecraft Forge](https://files.minecraftforge.net) mod that sh
 ## How To Install
 - Ensure [Minecraft Forge](https://files.minecraftforge.net) Is Installed
 ### Install Using Precompiled JARs
-- You can download the prebuilt jar from any of the Releases Above (Make Sure To Download The shaded Version)
+- You can download the prebuilt jar from any of the [Releases](https://github.com/amitojsingh366/Amitojs-Minecraft-RPC/releases/) Above (Make sure to download the "shaded" version)
 - Copy the JAR into your Minecraft Mods folder
 - Run the game using [Minecraft Forge](https://files.minecraftforge.net)!
 ### Compile it yourself from source
