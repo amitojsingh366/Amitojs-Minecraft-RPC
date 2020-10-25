@@ -140,23 +140,23 @@ public class MinecraftRPCMod {
         presence.largeImageKey = "icon_720";
         presence.largeImageText = "Amitoj's Minecraft RPC";
         presence.instance = 1;
-        presence.partyId = "priv_party";
-        presence.matchSecret = "abXyyz";
-        presence.joinSecret = "moonSqik";
-        presence.spectateSecret = "kLopNq";
         if (!issinglePlayer) {
             String serverip = mc.getCurrentServerData().serverIP.toUpperCase();
             presence.state = "Multiplayer - " + serverip;
+            presence.partyId = "priv_party";
+            presence.matchSecret = "abXyyz";
+            presence.joinSecret = "moonSqik";
+            presence.spectateSecret = "kLopNq";
         } else {
             presence.state = "Singleplayer";
             presence.partySize = 1;
             presence.partyMax = 1;
         }
         if (dimKey == World.OVERWORLD) {
-            presence.smallImageKey = "zombie_face";
+            presence.smallImageKey = "villager_face";
             presence.smallImageText = "In The Overworld";
         } else if (dimKey == World.THE_NETHER) {
-            presence.smallImageKey = "ghast_face";
+            presence.smallImageKey = "blaze_face";
             presence.smallImageText = "In The Nether";
         } else if (dimKey == World.THE_END) {
             presence.smallImageKey = "enderman_face";

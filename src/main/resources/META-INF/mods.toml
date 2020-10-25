@@ -10,7 +10,7 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 
 modId="amrpc" #mandatory
 
-version="1.16.3-1.0.0" #mandatory
+version="1.0.1" #mandatory
 
 displayName="Amitoj's Minecraft RPC" #mandatory
 
