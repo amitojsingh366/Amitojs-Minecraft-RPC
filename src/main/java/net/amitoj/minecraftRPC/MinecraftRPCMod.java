@@ -124,6 +124,7 @@ public class MinecraftRPCMod {
         presence.instance = 1;
         lib.Discord_UpdatePresence(presence);
 
+
     }
 
     private void updatePresence() {
