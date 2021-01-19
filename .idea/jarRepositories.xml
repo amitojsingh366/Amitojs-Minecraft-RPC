@@ -41,5 +41,10 @@
       <option name="name" value="maven" />
       <option name="url" value="file:$PROJECT_DIR$/../../Minecraft%20Modding/AmitojsMinecraftRPC/mcmodsrepo" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/../../../../Extreme%20SSD/Projects/Minecraft_Modding/Amitojs-Minecraft-RPC/mcmodsrepo" />
+    </remote-repository>
   </component>
 </project>

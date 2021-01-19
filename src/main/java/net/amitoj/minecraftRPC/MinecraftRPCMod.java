@@ -3,18 +3,11 @@ package net.amitoj.minecraftRPC;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.RegistryKey;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.event.entity.EntityLeaveWorldEvent;
-import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -140,17 +133,21 @@ public class MinecraftRPCMod {
         presence.largeImageKey = "icon_720";
         presence.largeImageText = "Amitoj's Minecraft RPC";
         presence.instance = 1;
-        presence.partyId = "priv_party";
-        presence.matchSecret = "abXyyz";
-        presence.joinSecret = "moonSqik";
-        presence.spectateSecret = "kLopNq";
         if (!issinglePlayer) {
             String serverip = mc.getCurrentServerData().serverIP.toUpperCase();
             presence.state = "Multiplayer - " + serverip;
+            presence.partyId = mc.getCurrentServerData().serverIP;
+            presence.matchSecret = mc.getCurrentServerData().serverIP;
+            presence.joinSecret = mc.getCurrentServerData().serverIP;
+            presence.spectateSecret = mc.getCurrentServerData().serverIP;
         } else {
             presence.state = "Singleplayer";
             presence.partySize = 1;
             presence.partyMax = 1;
+            presence.partyId =  mc.world.getWorldInfo().toString();
+            presence.matchSecret = mc.world.getWorldInfo().toString();
+            presence.joinSecret = mc.world.getWorldInfo().toString();
+            presence.spectateSecret = mc.world.getWorldInfo().toString();
         }
         if (dimKey == World.OVERWORLD) {
             presence.smallImageKey = "zombie_face";
